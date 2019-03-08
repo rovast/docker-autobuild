@@ -4,20 +4,22 @@
 
 ## Tags
 
-### 7.2-fpm
+### rovast/php:7.2-fpm
 
 extensions
 - [x] mongodb
+- [x] redis
 
 software
 - [x] curl
 - [x] composer
 
 
-### 7.2-cli
+### rovast/php:7.2-cli
 
 extensions
 - [x] mongodb
+- [x] redis
 
 software
 - [x] curl
