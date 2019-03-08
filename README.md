@@ -13,6 +13,7 @@ extensions
 software
 - [x] curl
 - [x] composer
+- [x] cron
 
 
 ### rovast/php:7.2-cli
@@ -24,4 +25,5 @@ extensions
 software
 - [x] curl
 - [x] composer
+- [x] cron
 

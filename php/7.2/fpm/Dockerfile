@@ -3,7 +3,8 @@ FROM php:7.2-fpm
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
-    curl
+    curl \
+    cron
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/
