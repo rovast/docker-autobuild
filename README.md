@@ -12,3 +12,14 @@ extensions
 software
 - [x] curl
 - [x] composer
+
+
+### 7.2-cli
+
+extensions
+- [x] mongodb
+
+software
+- [x] curl
+- [x] composer
+
