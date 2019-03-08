@@ -6,11 +6,11 @@
 
 ### rovast/php:7.2-fpm
 
-extensions
+added extensions
 - [x] mongodb
 - [x] redis
 
-software
+added software
 - [x] curl
 - [x] composer
 - [x] cron
@@ -18,12 +18,15 @@ software
 
 ### rovast/php:7.2-cli
 
-extensions
+added extensions
 - [x] mongodb
 - [x] redis
+- [x] zip
 
-software
+added software
 - [x] curl
 - [x] composer
 - [x] cron
+- [x] zip
+- [x] unzip
 
