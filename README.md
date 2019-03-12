@@ -14,7 +14,9 @@ added software
 - [x] curl
 - [x] composer
 - [x] cron
-
+- [x] zip
+- [x] unzip
+- [x] git
 
 ### rovast/php:7.2-cli
 
@@ -29,4 +31,4 @@ added software
 - [x] cron
 - [x] zip
 - [x] unzip
-
+- [x] git
