@@ -1,35 +1,15 @@
 # docker-autobuild
-根据 Dockerfile 动态 build，不至于每次 run docker 时都需要重新下载一坨东西
 
+在官方的 docker images 中增加一些必要的软件、拓展、工具，来便于自己的开发
+
+> 所有的镜像都基于 Dockerfile 自动构建，请放心查阅使用
 
 ## Tags
 
-### rovast/php:7.2-fpm
+### rovast/php
 
-added extensions
-- [x] mongodb
-- [x] redis
-- [x] zip
+|            | rovast/php:7.2-fpm                    | rovast/php:7.2-cli                    |
+| ---------- | ------------------------------------- | ------------------------------------- |
+| php-extensions | mongodb、redis、zip                   | mongodb、redis、zip                   |
+| software   | curl、composer、cron、zip、unzip、git | curl、composer、cron、zip、unzip、git |
 
-added software
-- [x] curl
-- [x] composer
-- [x] cron
-- [x] zip
-- [x] unzip
-- [x] git
-
-### rovast/php:7.2-cli
-
-added extensions
-- [x] mongodb
-- [x] redis
-- [x] zip
-
-added software
-- [x] curl
-- [x] composer
-- [x] cron
-- [x] zip
-- [x] unzip
-- [x] git
