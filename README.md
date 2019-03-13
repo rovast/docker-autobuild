@@ -9,6 +9,7 @@
 added extensions
 - [x] mongodb
 - [x] redis
+- [x] zip
 
 added software
 - [x] curl
