@@ -13,3 +13,9 @@
 | php-extensions | mongodb、redis、zip                   | mongodb、redis、zip                   |
 | software   | curl、composer、cron、zip、unzip、git | curl、composer、cron、zip、unzip、git |
 
+### rovast/gcc
+
+|            | rovast/gcc:8                    |
+| ---------- | ------------------------------- |
+| software   | gdb |
+
