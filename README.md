@@ -19,3 +19,28 @@
 | ---------- | ------------------------------- |
 | software   | gdb |
 
+结合 docker-compose 使用，方便 gdb 调试
+
+```yaml
+version: '2'
+
+services:
+  gcc:
+    image: rovast/gcc:8
+    container_name: my-gcc
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - SYS_PTRACE
+    volumes:
+      - /home/rovast/Code:/home/Code
+      - ./README.md:/home/README.md
+    command: tail -f /home/README.md
+```
+
+正确挂载自己的代码目录到 /home/Code 即可
+
+```bash
+docker-compose up -d
+docker exec -it my-gcc bash
+```
