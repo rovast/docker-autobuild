@@ -46,10 +46,10 @@ docker exec -it my-gcc bash
 ```
 
 
-### rovast/gcc-php-src
+### rovast/gdb-php-src
 
-调试 PHP 源码使用，基于 gcc 官方镜像构建
+GDB 调试 PHP 源码使用，基于 gcc 官方镜像构建
 
-|            | rovast/gcc-php-src:7.0.0                    |
+|            | rovast/gdb-php-src:7.0.0                    |
 | ---------- | ------------------------------- |
 | software   | gdb |
