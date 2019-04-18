@@ -1,3 +1,5 @@
+[TOC]
+
 # docker-autobuild
 
 在官方的 docker images 中增加一些必要的软件、拓展、工具，来便于自己的开发
