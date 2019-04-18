@@ -17,7 +17,9 @@ RUN cd /home/php-7.0.0 \
     && find -type f -name '*.a' -delete \
     && make install
 
+RUN echo "gdb-php-src started ..." > /home/start.md
+
 # Set workdir
 WORKDIR /home/
 
-CMD ["php", "-a"]
+CMD ["tail", "-f", "/home/start.md"]
