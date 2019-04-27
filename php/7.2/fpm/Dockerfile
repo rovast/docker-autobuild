@@ -12,11 +12,11 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get clean && rm -rf /var/lib/apt/lists/
 
 # Install extensions
-RUN docker-php-ext-install zip pdo mysqli \
+RUN docker-php-ext-install zip pdo pdo-mysql mysqli \
     && pecl install \
     mongodb \
     redis \
-    && docker-php-ext-enable zip pdo mysqli mongodb redis
+    && docker-php-ext-enable zip pdo pdo-mysql mysqli mongodb redis
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer

@@ -23,8 +23,8 @@
 | ----------                                                   | -------------------------------------        | -------------------------------------                                   | ------------------------------------- |
 | [gcc/8/Dockerfile](gcc/8/Dockerfile)                         | [gcc:8](https://hub.docker.com/_/gcc)        | [rovast/gcc:8](https://hub.docker.com/r/rovast/gcc)                     | 增加了 gdb，方便调试 |
 | [gdb-php-src/7.0.0/Dockerfile](gdb-php-src/7.0.0/Dockerfile) | [gcc:8](https://hub.docker.com/_/gcc)        | [rovast/gdb-php-src:7.0.0](https://hub.docker.com/r/rovast/gdb-php-src) | 使用 gcc 编译了 php7.0.0 的源码，开启了 debug 参数，用于调试学习 PHP 源码使用|
-| [php/7.2/cli/Dockerfile](php/7.2/cli/Dockerfile)             | [php:7.2-cli](https://hub.docker.com/_/php)  | [rovast/php:7.2-cli](https://hub.docker.com/r/rovast/php)               | 基于官方的 php7.2-cli，增加了以下拓展：mongodb、redis、zip、pdo、mysqli，安装了以下软件：curl、composer、cron、zip、unzip、git|
-| [php/7.2/fpm/Dockerfile](php/7.2/fpm/Dockerfile)             | [php:7.2-fpm](https://hub.docker.com/_/php)  | [rovast/php:7.2-fpm](https://hub.docker.com/r/rovast/php)               | 基于官方的 php7.2-cli，增加了以下拓展：mongodb、redis、zip、pdo、mysqli，安装了以下软件：curl、composer、cron、zip、unzip、git|
+| [php/7.2/cli/Dockerfile](php/7.2/cli/Dockerfile)             | [php:7.2-cli](https://hub.docker.com/_/php)  | [rovast/php:7.2-cli](https://hub.docker.com/r/rovast/php)               | 基于官方的 php7.2-cli，增加了以下拓展：mongodb、redis、zip、pdo、pdo-mysql、mysqli，安装了以下软件：curl、composer、cron、zip、unzip、git|
+| [php/7.2/fpm/Dockerfile](php/7.2/fpm/Dockerfile)             | [php:7.2-fpm](https://hub.docker.com/_/php)  | [rovast/php:7.2-fpm](https://hub.docker.com/r/rovast/php)               | 基于官方的 php7.2-cli，增加了以下拓展：mongodb、redis、zip、pdo、pdo-mysql、mysqli，安装了以下软件：curl、composer、cron、zip、unzip、git|
 
 ## 注意事项 :warning:
 
