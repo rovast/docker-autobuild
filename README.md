@@ -12,7 +12,7 @@
 
 |            | rovast/php:7.2-fpm                    | rovast/php:7.2-cli                    |
 | ---------- | ------------------------------------- | ------------------------------------- |
-| php-extensions | mongodb、redis、zip                   | mongodb、redis、zip                   |
+| php-extensions | mongodb、redis、zip、pdo、mysqli                 | mongodb、redis、zip、pdo、mysqli                   |
 | software   | curl、composer、cron、zip、unzip、git | curl、composer、cron、zip、unzip、git |
 
 ### rovast/gcc
