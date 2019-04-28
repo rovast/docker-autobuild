@@ -6,10 +6,13 @@ RUN apt-get update && apt-get install -y \
     curl \
     zip unzip libzip-dev \
     cron \
-    git
+    git \
+    libicu-dev
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/
+
+RUN docker-php-ext-configure intl
 
 # Install extensions
 RUN docker-php-ext-install zip intl pdo pdo_mysql mysqli \
