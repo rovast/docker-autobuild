@@ -15,7 +15,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/
 RUN docker-php-ext-configure intl
 
 # Install extensions
-RUN docker-php-ext-install intl zip pdo pdo_mysql mysqli pcntl \
+RUN docker-php-ext-install intl zip pdo pdo_mysql mysqli pcntl bcmath \
     && pecl install \
     mongodb \
     redis \
