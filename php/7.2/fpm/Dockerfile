@@ -19,7 +19,7 @@ RUN docker-php-ext-install intl zip pdo pdo_mysql mysqli pcntl \
     && pecl install \
     mongodb \
     redis \
-    && docker-php-ext-enable intl zip pdo pdo_mysql mysqli mongodb redis pcntl
+    && docker-php-ext-enable intl zip pdo pdo_mysql mysqli mongodb redis pcntl bcmath
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
