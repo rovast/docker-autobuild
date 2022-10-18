@@ -1,23 +1,19 @@
-<h1 align="center"> docker-autobuild </h1>
+# docker-autobuild
 
-<p align="center">基于官方镜像进行二次构建的可信镜像集合/p>
+使用 Github actions 基于官方镜像进行二次构建的可信镜像集合
 
 # 背景
 
-:baby: [docker hub](https://hub.docker.com/) 社区为我们提供了诸多开箱即用的镜像。
-但是部分的镜像由于其通用性而牺牲了定制性，这里我们基于官方的进行二次构建，进而满足更丰富的应用场景。
+社区为我们提供了诸多开箱即用的镜像，但是部分的镜像由于其通用性而牺牲了定制性，这里我们基于官方的进行二次构建，进而满足更丰富的应用场景。
 
-本项目使用 github actions 进行镜像的构建。
+# 一览
 
----
+访问 https://hub.docker.com/r/rovast 查看更多镜像
 
-
-# 汇总
-
-| 镜像               | 说明                            |
-| ------------------ | ------------------------------- |
-| rovasr/php:7.4-cli | 增加诸多拓展和开发常用软件 [^1] |
-| rovasr/php:7.4-fpm | 增加诸多拓展和开发常用软件 [^1] |
+| 状态 | 镜像               | 说明                            |
+| ---- | ------------------ | ------------------------------- |
+|  [![php7.4-cli](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-cli.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-cli.yml)    | rovast/php:7.4-cli | 增加诸多拓展和开发常用软件 [^1] |
+|  [![php7.4-fpm](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-fpm.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-fpm.yml)   | rovast/php:7.4-fpm | 增加诸多拓展和开发常用软件 [^1] |
 
 
 [^1]: 安装拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl、bcmath、gd。安装软件：curl、composer、cron、zip、unzip、git
