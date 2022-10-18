@@ -1,30 +1,54 @@
 <h1 align="center"> docker-autobuild </h1>
 
-<p align="center">基于各种官方 image 侯建的 Dockerfile 集合</p>
+<p align="center">基于官方镜像进行二次构建的可信镜像集合/p>
 
-## 背景
+# 背景
 
-:baby: [docker hub](https://hub.docker.com/) 为我们提供了好多便捷的环境。
-官方提供的基础 image 一般都是比较精简的，我们需要在此基础上进行部分拓展，形成
-自己的 Dockerfile。
+:baby: [docker hub](https://hub.docker.com/) 社区为我们提供了诸多开箱即用的镜像。
+但是部分的镜像由于其通用性而牺牲了定制性，这里我们基于官方的进行二次构建，进而满足更丰富的应用场景。
 
-本项目以此为基础，结合 [cloud docker](https://cloud.docker.com) 的 autobuild 功能，
-打包了一些镜像。
-
-> :bulb: 使用 docker 的 autobuild 自动构建的速度很快（毕竟是国外）。并且设置好了之后，
-> 对应的 github 仓库的 Dockerfile 变更后，可以立即自动 build
+本项目使用 github actions 进行镜像的构建。
 
 ---
 
 
-## 一览
+# 汇总
 
-| Dockerfile 路径                                              | 官方镜像                                      | 本项目镜像                                                               | 说明      |
-| ----------                                                   | -------------------------------------        | -------------------------------------                                   | ------------------------------------- |
-| [gcc/8/Dockerfile](gcc/8/Dockerfile)                         | [gcc:8](https://hub.docker.com/_/gcc)        | [rovast/gcc:8](https://hub.docker.com/r/rovast/gcc)                     | 增加了 gdb，方便调试 |
-| [gdb-php-src/7.0.0/Dockerfile](gdb-php-src/7.0.0/Dockerfile) | [gcc:8](https://hub.docker.com/_/gcc)        | [rovast/gdb-php-src:7.0.0](https://hub.docker.com/r/rovast/gdb-php-src) | 使用 gcc 编译了 php7.0.0 的源码，开启了 debug 参数，用于调试学习 PHP 源码使用|
-| [php/7.2/cli/Dockerfile](php/7.2/cli/Dockerfile)             | [php:7.2-cli](https://hub.docker.com/_/php)  | [rovast/php:7.2-cli](https://hub.docker.com/r/rovast/php)               | 基于官方的 php7.2-cli，增加了以下拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl，安装了以下软件：curl、composer、cron、zip、unzip、git|
-| [php/7.2/fpm/Dockerfile](php/7.2/fpm/Dockerfile)             | [php:7.2-fpm](https://hub.docker.com/_/php)  | [rovast/php:7.2-fpm](https://hub.docker.com/r/rovast/php)               | 基于官方的 php7.2-fpm，增加了以下拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl、bcmath，安装了以下软件：curl、composer、cron、zip、unzip、git|
+## php
+
+来源：`php:7.4`
+
+适用场景：用于 PHP 的日常开发和部署
+
+安装拓展：
+- mongodb
+- redis
+- zip
+- intl
+- pdo
+- pdo_mysql
+- mysqli
+- pcntl
+- bcmath
+
+安装软件
+- curl
+- composer
+- cron
+- zip
+- unzip
+- git
+
+
+---
+
+
+| Dockerfile 路径                                              | 官方镜像                                    | 本项目镜像                                                              | 说明                                                                                                                                                           |
+| ------------------------------------------------------------ | ------------------------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [gcc/8/Dockerfile](gcc/8/Dockerfile)                         | [gcc:8](https://hub.docker.com/_/gcc)       | [rovast/gcc:8](https://hub.docker.com/r/rovast/gcc)                     | 增加了 gdb，方便调试                                                                                                                                           |
+| [gdb-php-src/7.0.0/Dockerfile](gdb-php-src/7.0.0/Dockerfile) | [gcc:8](https://hub.docker.com/_/gcc)       | [rovast/gdb-php-src:7.0.0](https://hub.docker.com/r/rovast/gdb-php-src) | 使用 gcc 编译了 php7.0.0 的源码，开启了 debug 参数，用于调试学习 PHP 源码使用                                                                                  |
+| [php/7.2/cli/Dockerfile](php/7.2/cli/Dockerfile)             | [php:7.2-cli](https://hub.docker.com/_/php) | [rovast/php:7.2-cli](https://hub.docker.com/r/rovast/php)               | 基于官方的 php7.2-cli，增加了以下拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl，安装了以下软件：curl、composer、cron、zip、unzip、git         |
+| [php/7.2/fpm/Dockerfile](php/7.2/fpm/Dockerfile)             | [php:7.2-fpm](https://hub.docker.com/_/php) | [rovast/php:7.2-fpm](https://hub.docker.com/r/rovast/php)               | 基于官方的 php7.2-fpm，增加了以下拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl、bcmath，安装了以下软件：curl、composer、cron、zip、unzip、git |
 
 ## 注意事项 :warning:
 
