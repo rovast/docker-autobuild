@@ -1,12 +1,12 @@
-name: php7.4
+name: php7.4-cli
 
 on:
   workflow_dispatch:
   push:
     branches:
       - master
-    # paths:
-    #   - 'php/7.4/Dockerfile'
+    paths:
+      - 'php/7.4/cli/Dockerfile'
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: "{{defaultContext}}:php/7.4"
+          context: "{{defaultContext}}:php/7.4/cli"
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: rovast/php:7.4
+          tags: rovast/php:7.4-cli

@@ -14,30 +14,13 @@
 
 # 汇总
 
-## php
+| 镜像               | 说明                            |
+| ------------------ | ------------------------------- |
+| rovasr/php:7.4-cli | 增加诸多拓展和开发常用软件 [^1] |
+| rovasr/php:7.4-fpm | 增加诸多拓展和开发常用软件 [^1] |
 
-来源：`php:7.4`
 
-适用场景：用于 PHP 的日常开发和部署
-
-安装拓展：
-- mongodb
-- redis
-- zip
-- intl
-- pdo
-- pdo_mysql
-- mysqli
-- pcntl
-- bcmath
-
-安装软件
-- curl
-- composer
-- cron
-- zip
-- unzip
-- git
+[^1]: 安装拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl、bcmath、gd。安装软件：curl、composer、cron、zip、unzip、git
 
 
 ---
