@@ -1,4 +1,4 @@
-name: php7.4
+name: build-php7.4
 
 on:
   workflow_dispatch:
@@ -25,7 +25,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: php/7.4
+          context: .
+          file: php/7.4/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: rovast/php:7.4
