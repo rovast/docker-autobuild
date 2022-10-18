@@ -25,7 +25,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./php/7.4
+          context: "{{defaultContext}}:php:7.4"
           platforms: linux/amd64,linux/arm64
           push: true
           tags: rovast/php:7.4
