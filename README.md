@@ -12,6 +12,8 @@
 
 | 状态 | 镜像               | 说明                            |
 | ---- | ------------------ | ------------------------------- |
+|  [![php7.2-cli](https://github.com/rovast/docker-autobuild/actions/workflows/php7.2-cli.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/php7.2-cli.yml)    | rovast/php:7.2-cli | 增加诸多拓展和开发常用软件 [^1] |
+|  [![php7.2-fpm](https://github.com/rovast/docker-autobuild/actions/workflows/php7.2-fpm.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/php7.2-fpm.yml)   | rovast/php:7.2-fpm | 增加诸多拓展和开发常用软件 [^1] |
 |  [![php7.4-cli](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-cli.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-cli.yml)    | rovast/php:7.4-cli | 增加诸多拓展和开发常用软件 [^1] |
 |  [![php7.4-fpm](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-fpm.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-fpm.yml)   | rovast/php:7.4-fpm | 增加诸多拓展和开发常用软件 [^1] |
 
