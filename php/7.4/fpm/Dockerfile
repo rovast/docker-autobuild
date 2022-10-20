@@ -23,7 +23,7 @@ RUN docker-php-ext-configure intl \
 RUN docker-php-ext-install -j$(nproc) intl zip pdo pdo_mysql mysqli pcntl bcmath gd \
     && pecl install mongodb redis \
     && docker-php-ext-enable \
-    intl zip pdo pdo_mysql mysqli pcntl bcmath gd \
+    intl zip pdo pdo_mysql mysqli pcntl bcmath gd imagick \
     mongodb redis
 
 # Install composer
