@@ -10,7 +10,9 @@ RUN apt-get update && apt-get install -y \
     libicu-dev \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
-    libpng-dev
+    libpng-dev \
+    libmagickwand-dev \
+    --no-install-recommends
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/
@@ -21,10 +23,10 @@ RUN docker-php-ext-configure intl \
 
 # Install extensions
 RUN docker-php-ext-install -j$(nproc) intl zip pdo pdo_mysql mysqli pcntl bcmath gd \
-    && pecl install mongodb redis \
+    && pecl install mongodb redis imagick \
     && docker-php-ext-enable \
     intl zip pdo pdo_mysql mysqli pcntl bcmath gd imagick \
-    mongodb redis
+    mongodb redis imagick
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer

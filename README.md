@@ -12,8 +12,8 @@
 |  [![php7.4-fpm](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-fpm.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-fpm.yml)   | rovast/php:7.4-fpm | 增加诸多拓展和开发常用软件 [^2] |
 
 
-[^1]: 安装拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl、bcmath。安装软件：curl、composer、cron、zip、unzip、git
-[^2]: 安装拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl、bcmath、gd。安装软件：curl、composer、cron、zip、unzip、git
+[^1]: 安装拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl、bcmath、imagick。安装软件：curl、composer、cron、zip、unzip、git
+[^2]: 安装拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl、bcmath、gd、imagick。安装软件：curl、composer、cron、zip、unzip、git
 
 
 ---
