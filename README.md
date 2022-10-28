@@ -10,6 +10,8 @@
 |  [![php7.2-fpm](https://github.com/rovast/docker-autobuild/actions/workflows/php7.2-fpm.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/php7.2-fpm.yml)   | rovast/php:7.2-fpm | 增加诸多拓展和开发常用软件 [^1] |
 |  [![php7.4-cli](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-cli.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-cli.yml)    | rovast/php:7.4-cli | 增加诸多拓展和开发常用软件 [^2] |
 |  [![php7.4-fpm](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-fpm.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/php7.4-fpm.yml)   | rovast/php:7.4-fpm | 增加诸多拓展和开发常用软件 [^2] |
+|  [![cadvisor:0.45](https://github.com/rovast/docker-autobuild/actions/workflows/cadvisor0.45.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/cadvisor0.45.yml)   | rovast/cadvisor:0.45 | gcr.io 镜像 |
+|  [![kube-state-metrics:2.0](https://github.com/rovast/docker-autobuild/actions/workflows/kube-state-metrics2.0.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/kube-state-metrics2.0.yml)   | rovast/kube-state-metrics:2.0 | gcr.io 镜像 |
 
 
 [^1]: 安装拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl、bcmath、imagick。安装软件：curl、composer、cron、zip、unzip、git

@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - 'kube-state-metrics/2.0/Dockerfile'
+      - 'google/kube-state-metrics/2.0/Dockerfile'
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: "{{defaultContext}}:kube-state-metrics/2.0"
+          context: "{{defaultContext}}:google/kube-state-metrics/2.0"
           platforms: linux/amd64,linux/arm64
           push: true
           tags: rovast/kube-state-metrics:2.0
