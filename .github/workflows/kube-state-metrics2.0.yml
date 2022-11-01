@@ -37,6 +37,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: rovast/capistrano
+          repository: rovast/kube-state-metrics
           short-description: https://github.com/rovast/docker-autobuild
           readme-filepath: ./README.md
