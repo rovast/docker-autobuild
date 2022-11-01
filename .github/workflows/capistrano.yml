@@ -35,4 +35,5 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: rovast/capistrano
-          readme-filepath: "{{defaultContext}}:README.md"
+          short-description: ${{ github.event.repository.description }}
+          readme-filepath: ./README.md
