@@ -29,6 +29,9 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: rovast/capistrano:latest,rovast/capistrano:3.17.1
+
+      - name: checkout code
+        uses: actions/checkout@v2
       - name: Update dockerhub doc
         uses: peter-evans/dockerhub-description@v3
         with:
