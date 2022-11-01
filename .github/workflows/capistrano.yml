@@ -28,10 +28,11 @@ jobs:
           context: "{{defaultContext}}:capistrano"
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: rovast/capistrano
+          tags: rovast/capistrano:latest,rovast/capistrano:3.17.1
       - name: Update dockerhub doc
         uses: peter-evans/dockerhub-description@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: rovast/docker-autobuild
+          repository: rovast/capistrano
+          readme-filepath: "{{defaultContext}}:README.md"
