@@ -38,5 +38,5 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: rovast/capistrano
-          short-description: ${{ github.event.repository.description }}
+          short-description: https://github.com/rovast/docker-autobuild
           readme-filepath: ./README.md

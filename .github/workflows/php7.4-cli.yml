@@ -29,3 +29,14 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: rovast/php:7.4-cli
+
+      - name: checkout code
+        uses: actions/checkout@v2
+      - name: Update dockerhub doc
+        uses: peter-evans/dockerhub-description@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: rovast/capistrano
+          short-description: https://github.com/rovast/docker-autobuild
+          readme-filepath: ./README.md
