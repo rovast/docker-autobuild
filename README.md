@@ -13,12 +13,13 @@
 |  [![cadvisor:0.45](https://github.com/rovast/docker-autobuild/actions/workflows/cadvisor0.45.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/cadvisor0.45.yml)   | rovast/cadvisor:0.45 | gcr.io 镜像 |
 |  [![kube-state-metrics:2.0](https://github.com/rovast/docker-autobuild/actions/workflows/kube-state-metrics2.0.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/kube-state-metrics2.0.yml)   | rovast/kube-state-metrics:2.0 | gcr.io 镜像 ||  [![capistrano](https://github.com/rovast/docker-autobuild/actions/workflows/capistrano.yml/badge.svg)](https://github.com/rovast/docker-autobuild/actions/workflows/capistrano.yml)   | rovast/capistrano | capistrano 镜像构建 |
 | TODO | rovast/gcc:8 |  增加了 gdb，方便调试 |
-| TODO | rovast/gdb-php-src:7.0.0 |  使用 gcc 编译了 php7.0.0 的源码，开启了 debug 参数，用于调试学习 PHP 源码使用 |
+| TODO | rovast/gdb-php-src:7.0.0 | PHP 源码学习使用 [^3] |
 
 
 
 [^1]: 安装拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl、bcmath、imagick。安装软件：curl、composer、cron、zip、unzip、git
 [^2]: 安装拓展：mongodb、redis、zip、intl、pdo、pdo_mysql、mysqli、pcntl、bcmath、gd、imagick。安装软件：curl、composer、cron、zip、unzip、git
+[^3]: 使用gcc编译了php7.0.0的源码，开启了debug参数，用于调试学习PHP源码使用
 
 
 ## 相关项目 :link:
