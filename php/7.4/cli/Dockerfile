@@ -30,3 +30,6 @@ RUN docker-php-ext-install -j$(nproc) intl zip pdo pdo_mysql mysqli pcntl bcmath
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Set mirror for china users
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
