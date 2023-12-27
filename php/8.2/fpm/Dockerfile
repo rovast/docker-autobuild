@@ -1,4 +1,4 @@
-FROM php:8-fpm-alpine
+FROM php:8.2-fpm-alpine
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
@@ -34,10 +34,6 @@ RUN apk update \
     && mv composer.phar /usr/local/bin/composer \
     && apk del .build-dependencies \
     && rm -rf /tmp/*
-
-# demo
-RUN sed -i 's/http:\/\/deb.debian.org/https:\/\/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list && \
-    apt-get update && apt-get install -y git && apt-get install -y supervisor
 
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/bin/
 
