@@ -27,7 +27,7 @@ jobs:
             -f ./yapi/Dockerfile \
             --platform linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x \
             --push \
-            --tag rovast/yapi:latest
+            --tag rovast/yapi:latest .
   # build:
   #   runs-on: ubuntu-latest
     
