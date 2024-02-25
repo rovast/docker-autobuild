@@ -25,7 +25,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: "{{defaultContext}}:php/7.2/cli"
+          context: "{{defaultContext}}:yapi"
           platforms: linux/amd64,linux/arm64
           push: true
           tags: rovast/yapi
@@ -37,6 +37,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: rovast/php
+          repository: rovast/docker-autobuild
           short-description: https://github.com/rovast/docker-autobuild
           readme-filepath: ./README.md
