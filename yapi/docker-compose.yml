@@ -1,37 +1,31 @@
-version: '2.1'
+version: '3'
+
 services:
-  yapi:
-    image: mrjin/yapi:latest
-    # build: ./
-    container_name: yapi
+  yapi-web:
+    image: jayfong/yapi:latest
+    container_name: yapi-web
+    ports:
+      - 40001:3000
     environment:
-      - VERSION=1.10.2
-      - HOME=/home
-      - PORT=3000
-      - ADMIN_EMAIL=me@jinfeijie.cn
-      - DB_SERVER=mongo
-      - DB_NAME=yapi
-      - DB_PORT=27017
-    # restart: always
-    ports:
-      - 127.0.0.1:3000:3000
-    volumes:
-      - ~/data/yapi/log:/home/log # log dir
+      - YAPI_ADMIN_ACCOUNT=admin@docker.yapi
+      - YAPI_ADMIN_PASSWORD=adm1n
+      - YAPI_CLOSE_REGISTER=true
+      - YAPI_DB_SERVERNAME=yapi-mongo
+      - YAPI_DB_PORT=27017
+      - YAPI_DB_DATABASE=yapi
+      - YAPI_MAIL_ENABLE=false
+      - YAPI_LDAP_LOGIN_ENABLE=false
+      - YAPI_PLUGINS=[]
     depends_on:
-      - mongo
-    entrypoint: "bash /wait-for-it.sh mongo:27017 -- entrypoint.sh"
-    networks:
-      - back-net
-  mongo:
-    image: mongo
-    container_name: mongo
-    # restart: always
-    ports:
-      - 127.0.0.1:27017:27017
+      - yapi-mongo
+    links:
+      - yapi-mongo
+    restart: unless-stopped
+  yapi-mongo:
+    image: mongo:latest
+    container_name: yapi-mongo
     volumes:
-      - ~/data/yapi/mongodb:/data/db #db dir
-    networks:
-      - back-net
-networks:
-  back-net:
-    external: true
+      - ./data/db:/data/db
+    expose:
+      - 27017
+    restart: unless-stopped

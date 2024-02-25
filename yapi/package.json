@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "docker-build": "docker build -t jayfong/yapi:latest .",
+    "docker-down": "docker-compose down",
+    "docker-up": "docker-compose down && docker-compose up"
+  },
+  "dependencies": {
+    "@types/fs-extra": "9.0.1",
+    "@types/node": "12.12.21",
+    "deepmerge": "4.2.2",
+    "fs-extra": "9.0.0",
+    "globby": "11.0.0",
+    "typescript": "3.9.3"
+  }
+}
