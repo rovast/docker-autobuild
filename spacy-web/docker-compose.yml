@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    image: ticktin-ai:latest
+    ports:
+    - "8000:80"
+    volumes:
+    - .:/usr/src/app
+
